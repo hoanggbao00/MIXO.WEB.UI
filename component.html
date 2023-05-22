@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./assets/css/base/base.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+			integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			rel="stylesheet"
+			href="./assets/font/fontawesome-5.15.1/css/all.min.css"
+		/>
+	</head>
+
+	<body>
+		<!-- 1.Button -->
+		<div class="row1">
+			<label class="label-heading" for="">1. Button</label>
+			<button class="m-button">Nộp hồ sơ</button>
+		</div>
+
+		<!-- ButtonIcon -->
+		<div class="row1">
+			<label class="label-heading" for="">2. Button icon</label>
+			<!-- Button icon1 -->
+			<button class="m-button button__icon">
+				<img class="button__icon-img" src="./assets/icon/add.png" alt="" />
+				<p class="button__icon-title">Lập hồ sơ</p>
+			</button>
+
+			<!-- Button icon2-->
+			<div class="button__icon2">
+				<button class="m-button button__icon button__icon2-left">
+					<img class="button__icon-img" src="./assets/icon/add.png" alt="" />
+					<p class="button__icon-title">Lưu và thêm mới</p>
+				</button>
+				<div class="button__icon2-right">
+					<img
+						class="button__icon-img2"
+						src="./assets/icon/btn-next-page.svg"
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
+
+		<!-- COMBO BOX -->
+		<div class="row1">
+			<label class="label-heading" for="">3. Combo box</label>
+			<select class="combo-box">
+				<option value="1">Trạng thái 1</option>
+				<option value="2">Trạng thái 2</option>
+				<option value="3">Trạng thái 3</option>
+			</select>
+		</div>
+
+		<!-- FIELD INPUT - LABEL -->
+		<div class="row1">
+			<label class="label-heading" for="">4. FIELD INPUT - LABEL</label>
+			<input class="field-input" type="text" placeholder="Nhập thông tin" />
+			<input
+				class="field-input field-input--error"
+				type="text"
+				placeholder="Nhập thông tin"
+			/>
+		</div>
+
+		<!-- INPUT ICON -->
+		<div class="row1">
+			<label class="label-heading" for="">5. INPUT ICON</label>
+			<div class="input-icon">
+				<input
+					class="input-icon__input"
+					type="text"
+					placeholder="Nhập thông tin"
+				/>
+				<img class="input-icon__img" src="./assets/icon/search.png" alt="" />
+			</div>
+		</div>
+
+		<!-- TOAST MESSENGER -->
+		<div class="row1">
+			<label class="label-heading" for=""> 6. TOAST MESSENGER</label>
+			<div class="toast">
+				<i
+					class="toast__icon--messenger toast__icon--success fa-solid fa-circle-exclamation"
+				></i>
+				<p class="toast__title">Nội dung</p>
+				<i
+					class="toast__icon--close toast__icon--success fa-solid fa-xmark"
+				></i>
+			</div>
+			<div class="toast">
+				<i
+					class="toast__icon--messenger toast__icon--error fa-solid fa-circle-exclamation"
+				></i>
+				<p class="toast__title">Nội dung</p>
+				<i class="toast__icon--close toast__icon--error fa-solid fa-xmark"></i>
+			</div>
+			<div class="toast">
+				<i
+					class="toast__icon--messenger toast__icon--warring fa-solid fa-circle-exclamation"
+				></i>
+				<p class="toast__title">Nội dung</p>
+				<i
+					class="toast__icon--close toast__icon--warring fa-solid fa-xmark"
+				></i>
+			</div>
+			<div class="toast">
+				<i
+					class="toast__icon--messenger toast__icon--info fa-solid fa-circle-exclamation"
+				></i>
+				<p class="toast__title">Nội dung</p>
+				<i class="toast__icon--close toast__icon--info fa-solid fa-xmark"></i>
+			</div>
+		</div>
+
+		<!-- POPUP -->
+		<div class="grid">
+			<label class="label-heading" for="">7. POP-UP CẢNH BÁO</label>
+			<div class="row pop-up">
+				<div class="row pop-up__header">
+					<div class="pop-up__close">
+						<i class="fa-solid fa-xmark"></i>
+					</div>
+					<div class="pop-up__heading">Đóng Form thông tin chung</div>
+				</div>
+				<div class="row no-gutters pop-up__container">
+					<div class="row pop-up__content">
+						<div class="pop-up__content--icon pop-up__icon--success">
+							<i class="fa-solid fa-triangle-exclamation"></i>
+						</div>
+						<div class="pop-up__content-title">
+							Bạn có chắc muốn đóng class="label-heading" form nhập
+							<b>"Thông tin chung của thủ tục 603"</b>hay không
+						</div>
+					</div>
+				</div>
+				<div class="row no-gutters pop-up__footer">
+					<button class="m-button pop-up--continue">Tiếp tục nhập</button>
+					<button class="m-button">Đóng</button>
+				</div>
+			</div>
+			<div class="row pop-up">
+				<div class="row pop-up__header">
+					<div class="pop-up__close">
+						<i class="fa-solid fa-xmark"></i>
+					</div>
+					<div class="pop-up__heading">Xóa bản ghi A</div>
+				</div>
+				<div class="row no-gutters pop-up__container">
+					<div class="row pop-up__content">
+						<div class="pop-up__content--icon pop-up__icon--error">
+							<i class="fa-solid fa-triangle-exclamation"></i>
+						</div>
+						<div class="pop-up__content-title">
+							Bạn có chắc muốn xóa class="label-heading" form nhập
+							<b>"Thông tin chung của thủ tục 603"</b>hay không
+						</div>
+					</div>
+				</div>
+				<div class="row no-gutters pop-up__footer">
+					<button class="m-button pop-up--continue">Hủy</button>
+					<button class="m-button pop-up--remove">Xóa</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- POPUP Thêm Mới/Sửu -->
+		<div class="grid">
+			<label class="label-heading" for="">8. POP-UP THÊM MỚI/SỬA</label>
+			<div class="row pop-up">
+				<div class="row no-gutters pop-up__header">
+					<div class="pop-up__close">
+						<i class="fa-solid fa-xmark"></i>
+					</div>
+					<div class="pop-up__heading">Thêm hồ sơ đính kèm</div>
+				</div>
+				<div class="row no-gutters pop-up__container">
+					<div class="row pop-up__content">
+						<div class="row pop-up__input-box">
+							<label class="pop-up__input-heading" for=""
+								>Tên loại văn bản *</label
+							>
+							<br />
+							<input
+								type="text"
+								class="pop-up__input-content"
+								placeholder="Nhập tên văn bản"
+							/>
+						</div>
+					</div>
+					<div class="row no-gutters pop-up__content">
+						<div class="row pop-up__input-box">
+							<label class="pop-up__input-heading" for="">Số văn bản *</label>
+							<br />
+							<input
+								type="text"
+								class="pop-up__input-content"
+								placeholder="Nhập tên văn bản"
+							/>
+						</div>
+					</div>
+					<div class="row no-gutters pop-up__content">
+						<div class="col l-6 pop-up__input-box">
+							<label class="pop-up__input-heading" for=""
+								>Ngày phát hành văn bản *</label
+							>
+							<br />
+							<input
+								type="date"
+								class="pop-up__input-content"
+								placeholder="Nhập tên văn bản"
+							/>
+						</div>
+						<div class="col l-6 pop-up__input-box">
+							<label class="pop-up__input-heading" for=""
+								>Ngày văn bản có hiệu lực *</label
+							>
+							<br />
+							<input
+								type="date"
+								class="pop-up__input-content"
+								placeholder="Nhập tên văn bản"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="row no-gutters no-gutters pop-up__footer">
+					<button class="m-button pop-up--continue">Hủy</button>
+					<button class="m-button button__icon">
+						<img class="button__icon-img" src="./assets/icon/add.png" alt="" />
+						<p class="button__icon-title">Lưu</p>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Thông tin nhân viên -->
+		<div class="grid">
+			<div class="row user">
+				<div class="row no-gutters user-header">
+					<div class="user-header__close">
+						<i class="fa-solid fa-xmark"></i>
+					</div>
+					<div class="user-header__heading">Thông tin nhân viên</div>
+				</div>
+
+				<div class="row no-gutters user-container">
+					<div class="col l-3 user-avatar">
+						<img
+							class="user-avatar__img"
+							src="./assets//img/default-avatar.jpg"
+							alt=""
+						/>
+						<p class="user-avatar__title">
+							(Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif)
+						</p>
+					</div>
+					<div class="col l-9 user-content">
+						<div class="row no-gutters user-info">
+							<h3 class="row no-gutters user-info__heading">
+								A. Thông tin chung:
+							</h3>
+							<div class="row no-gutters user__input-box">
+								<div class="col l-6 user-info__left">
+									<label class="user__input-heading" for=""
+										>Mã nhân viên(*)</label
+									>
+									<br />
+									<input
+										type="text"
+										class="user__input-content"
+										placeholder="Mã nhân viên"
+									/>
+								</div>
+								<div class="col l-6 user-info__right">
+									<label class="user__input-heading" for="">Họ Và tên(*)</label>
+									<br />
+									<input
+										type="text"
+										class="user__input-content"
+										placeholder="Họ Và tên"
+									/>
+								</div>
+							</div>
+							<div class="row no-gutters user__input-box">
+								<div class="col l-6 user-info__left">
+									<label class="user__input-heading" for="">Ngày sinh</label>
+									<br />
+									<input type="date" class="user__input-content" />
+								</div>
+								<div class="col l-6 user-info__right">
+									<label class="user__input-heading" for="">Giới tính</label>
+									<br />
+									<select class="user__input-content" name="" id="">
+										<option value="Nam">Nam</option>
+										<option value="Nữ">Nữ</option>
+										<option value="Khác">Khác</option>
+									</select>
+								</div>
+							</div>
+							<div class="row no-gutters user__input-box">
+								<div class="col l-6 user-info__left">
+									<label class="user__input-heading" for=""
+										>Số CMND/ Căn cước(*)</label
+									>
+									<br />
+									<input
+										type="number"
+										class="user__input-content"
+										placeholder="Số CMND/ Căn cước"
+									/>
+								</div>
+								<div class="col l-6 user-info__right">
+									<label class="user__input-heading" for="">Ngày cấp</label>
+									<br />
+									<input type="date" class="user__input-content" />
+								</div>
+							</div>
+							<div class="row no-gutters user__input-box">
+								<div class="col l-6 user-info__left">
+									<label class="user__input-heading" for="">Nơi Cấp</label>
+									<br />
+									<input
+										type="text"
+										class="user__input-content"
+										placeholder="Nơi Cấp"
+									/>
+								</div>
+								<div class="col l-6 user-info__right"></div>
+							</div>
+							<div class="row no-gutters user__input-box">
+								<div class="col l-6 user-info__left">
+									<label class="user__input-heading" for="">Email (*)</label>
+									<br />
+									<input
+										type="email"
+										class="user__input-content"
+										placeholder="Email"
+									/>
+								</div>
+								<div class="col l-6 user-info__right">
+									<label class="user__input-heading" for=""
+										>Số điện thoại</label
+									>
+									<br />
+									<input
+										type="tel"
+										class="user__input-content"
+										placeholder="Số điện thoại"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="row no-gutters user-info">
+							<h3 class="row no-gutters user-info__heading">
+								B. Thông tin công việc
+							</h3>
+							<div class="row no-gutters user__input-box">
+								<div class="col l-6 user-info__left">
+									<label class="user__input-heading" for="">Vị trí</label>
+									<br />
+									<select
+										class="user__input-content"
+										name="-----Chọn-----"
+										id=""
+									>
+										<option value="Giám đốc">Giám đốc</option>
+										<option value="Quản lý">Quản lý</option>
+										<option value="Nhân viên">Nhân viên</option>
+									</select>
+								</div>
+								<div class="col l-6 user-info__right">
+									<label class="user__input-heading" for="">Phòng ban</label>
+									<br />
+									<select
+										class="user__input-content"
+										name="-----Chọn-----"
+										id=""
+									>
+										<option value="Phòng nhân sự">Phòng nhân sự</option>
+										<option value="Phòng kinh doanh">Phòng kinh doanh</option>
+										<option value="Phòng kỹ thuật">Phòng kỹ thuật</option>
+									</select>
+								</div>
+							</div>
+							<div class="row no-gutters user__input-box">
+								<div class="col l-6 user-info__left">
+									<label class="user__input-heading" for=""
+										>Mã số thuế cá nhân</label
+									>
+									<br />
+									<input
+										type="number"
+										class="user__input-content"
+										placeholder="Mã số thuế"
+									/>
+								</div>
+								<div class="col l-6 user-info__right">
+									<label class="user__input-heading" for=""
+										>Mức lương cơ bản</label
+									>
+									<br />
+									<input type="number" class="user__input-content" />
+								</div>
+							</div>
+							<div class="row no-gutters user__input-box">
+								<div class="col l-6 user-info__left">
+									<label class="user__input-heading" for=""
+										>Ngày gia nhập công ty</label
+									>
+									<br />
+									<input type="date" class="user__input-content" />
+								</div>
+								<div class="col l-6 user-info__right">
+									<label class="user__input-heading" for=""
+										>Tình trạng công viện</label
+									>
+									<br />
+									<select class="user__input-content" name="" id="">
+										<option value="Đang làm viêc">Đang làm viêc</option>
+										<option value="Đã nghỉ">Đã nghỉ</option>
+										<option value="Khác">Khác</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row no-gutters user__footer">
+				<button class="m-button user--cancel">Hủy</button>
+				<button class="m-button button__icon">
+					<img class="button__icon-img" src="./assets/icon/add.png" alt="" />
+					<p class="button__icon-title">Lưu</p>
+				</button>
+			</div>
+		</div>
+
+		<!-- giao diện người dùng -->
+		<div class="grid">
+			<div class="row app">
+				<div class="app__container">
+					<header class="row app__header">
+						<div class="app-header__left">
+							<div class="header-left__items">
+								<div class="header-left__toggle">
+									<div class="header-left__toggle-icon">
+										<img src="./assets/img/toggle.png" alt="" />
+									</div>
+									<div class="header-left__toggle-logo">
+										<img src="./assets/cukcuk-logo.png" alt="" />
+									</div>
+								</div>
+								<div class="header-left__agency">
+									<div class="header-left__agency-logo">
+										<img src="./assets/img/Logo_MISA.svg.png" alt="" />
+									</div>
+									<div class="header-left__agency-title">
+										Chi nhánh MISA miền Bắc
+									</div>
+									<div class="header-left__agency-icon">
+										<i class="fa-solid fa-angle-down"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="app-header__right">
+							<div class="header-right__items">
+								<div class="header-right__notify">
+									<i class="fa-regular fa-bell"></i>
+								</div>
+
+								<div class="header-right__account">
+									<div class="header-right__account-avatar">
+										<img src="./assets/icon/avatar-default.png" alt="" />
+									</div>
+									<div class="header-right__account-name">Nguyễn Văn Hoàng</div>
+								</div>
+								<div class="header-right__more">
+									<i class="fa-solid fa-ellipsis"></i>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="row no-gutters app-content">
+						<div class="col l-2 content-menu">
+							<div class="menu-list">
+								<div class="menu-list__items">
+									<div class="menu-list__item">
+										<div class="menu-list-icon">
+											<i class="fa-regular fa-file"></i>
+										</div>
+										<div class="menu-list-title">Hồ sơ điện tử</div>
+									</div>
+									<div class="menu-list__item">
+										<div class="menu-list-icon">
+											<i class="fa-regular fa-file"></i>
+										</div>
+										<div class="menu-list-title">Hồ sơ giấy</div>
+									</div>
+									<div class="menu-list__item">
+										<div class="menu-list-icon">
+											<i class="fa-regular fa-file"></i>
+										</div>
+										<div class="menu-list-title">Theo dõi chi</div>
+									</div>
+									<div class="menu-list__item">
+										<div class="menu-list-icon">
+											<i class="fa-regular fa-file"></i>
+										</div>
+										<div class="menu-list-title">Theo dõi đóng</div>
+									</div>
+									<div class="menu-list__item">
+										<div class="menu-list-icon">
+											<i class="fa-regular fa-file"></i>
+										</div>
+										<div class="menu-list-title">Quản lý lao động</div>
+									</div>
+									<div class="menu-list__item">
+										<div class="menu-list-icon">
+											<i class="fa-regular fa-file"></i>
+										</div>
+										<div class="menu-list-title">Thiết lập</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col l-10 content-main">
+							<table
+								class="content-main__table"
+								style="background-color: #fff; width: 100%"
+							>
+								<thead>
+									<tr class="row main-tr">
+										<th class="col l-1 main-th__checked"></th>
+										<th class="col l-1 main-th__number">#</th>
+										<th class="col l-2 main-th__id">Mã nhân viên</th>
+										<th class="col l-3 main-th__name">Họ và tên</th>
+										<th class="col l-2-4 main-th__position">Vị trí/Chức vụ</th>
+										<th class="col l-2-4 main-th__department">
+											Bộ phận/Phòng ban
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row main-tr">
+										<th class="col l-1 main-th__checked">
+											<input class="main-th__input" type="checkbox" name="" />
+										</th>
+										<th class="col l-1 main-th__number">
+											<p>1</p>
+										</th>
+										<th class="col l-2 main-th__id">
+											<p>1234678</p>
+										</th>
+										<th class="col l-3 main-th__name">
+											<p>Nguyễn Hương Giang</p>
+										</th>
+										<th class="col l-2-4 main-th__position">
+											<p>Tổng giám đốc</p>
+										</th>
+										<th class="col l-2-4 main-th__department">
+											<p>Khối sản xuất</p>
+										</th>
+									</tr>
+									<tr class="row main-tr">
+										<th class="col l-1 main-th__checked">
+											<input class="main-th__input" type="checkbox" name="" />
+										</th>
+										<th class="col l-1 main-th__number">
+											<p>1</p>
+										</th>
+										<th class="col l-2 main-th__id">
+											<p>1234678</p>
+										</th>
+										<th class="col l-3 main-th__name">
+											<p>Nguyễn Hương Giang</p>
+										</th>
+										<th class="col l-2-4 main-th__position">
+											<p>Tổng giám đốc</p>
+										</th>
+										<th class="col l-2-4 main-th__department">
+											<p>Khối sản xuất</p>
+										</th>
+									</tr>
+									<tr class="row main-tr">
+										<th class="col l-1 main-th__checked">
+											<input class="main-th__input" type="checkbox" name="" />
+										</th>
+										<th class="col l-1 main-th__number">
+											<p>1</p>
+										</th>
+										<th class="col l-2 main-th__id">
+											<p>1234678</p>
+										</th>
+										<th class="col l-3 main-th__name">
+											<p>Nguyễn Hương Giang</p>
+										</th>
+										<th class="col l-2-4 main-th__position">
+											<p>Tổng giám đốc</p>
+										</th>
+										<th class="col l-2-4 main-th__department">
+											<p>Khối sản xuất</p>
+										</th>
+									</tr>
+									<tr class="row main-tr">
+										<th class="col l-1 main-th__checked">
+											<input class="main-th__input" type="checkbox" name="" />
+										</th>
+										<th class="col l-1 main-th__number">
+											<p>1</p>
+										</th>
+										<th class="col l-2 main-th__id">
+											<p>1234678</p>
+										</th>
+										<th class="col l-3 main-th__name">
+											<p>Nguyễn Hương Giang</p>
+										</th>
+										<th class="col l-2-4 main-th__position">
+											<p>Tổng giám đốc</p>
+										</th>
+										<th class="col l-2-4 main-th__department">
+											<p>Khối sản xuất</p>
+										</th>
+									</tr>
+									<tr class="row main-tr">
+										<th class="col l-1 main-th__checked">
+											<input class="main-th__input" type="checkbox" name="" />
+										</th>
+										<th class="col l-1 main-th__number">
+											<p>1</p>
+										</th>
+										<th class="col l-2 main-th__id">
+											<p>1234678</p>
+										</th>
+										<th class="col l-3 main-th__name">
+											<p>Nguyễn Hương Giang</p>
+										</th>
+										<th class="col l-2-4 main-th__position">
+											<p>Tổng giám đốc</p>
+										</th>
+										<th class="col l-2-4 main-th__department">
+											<p>Khối sản xuất</p>
+										</th>
+									</tr>
+									<tr class="row main-tr">
+										<th class="col l-1 main-th__checked">
+											<input class="main-th__input" type="checkbox" name="" />
+										</th>
+										<th class="col l-1 main-th__number">
+											<p>1</p>
+										</th>
+										<th class="col l-2 main-th__id">
+											<p>1234678</p>
+										</th>
+										<th class="col l-3 main-th__name">
+											<p>Nguyễn Hương Giang</p>
+										</th>
+										<th class="col l-2-4 main-th__position">
+											<p>Tổng giám đốc</p>
+										</th>
+										<th class="col l-2-4 main-th__department">
+											<p>Khối sản xuất</p>
+										</th>
+									</tr>
+									<tr class="row main-tr">
+										<th class="col l-1 main-th__checked">
+											<input class="main-th__input" type="checkbox" name="" />
+										</th>
+										<th class="col l-1 main-th__number">
+											<p>1</p>
+										</th>
+										<th class="col l-2 main-th__id">
+											<p>1234678</p>
+										</th>
+										<th class="col l-3 main-th__name">
+											<p>Nguyễn Hương Giang</p>
+										</th>
+										<th class="col l-2-4 main-th__position">
+											<p>Tổng giám đốc</p>
+										</th>
+										<th class="col l-2-4 main-th__department">
+											<p>Khối sản xuất</p>
+										</th>
+									</tr>
+								</tbody>
+							</table>
+							<div class="row content-main__page">
+								<div class="col l-3 page-left">
+									<div class="row page-left__title">
+										<p>Hiển thị</p>
+										<b>01-20/123</b>
+										<p>lao động</p>
+									</div>
+								</div>
+								<div class="col l-6 page-list__items">
+									<div class="page-list__item">
+										<button class="page-item__button">
+											<img src="./assets/icon/btn-firstpage.svg" alt="" />
+										</button>
+										<button class="page-item__button">
+											<img src="./assets/icon/btn-prev-page.svg" alt="" />
+										</button>
+										<button
+											class="page-item__button page-item__button--border page-item__button--active"
+										>
+											1
+										</button>
+										<button class="page-item__button page-item__button--border">
+											2
+										</button>
+										<button class="page-item__button page-item__button--border">
+											3
+										</button>
+										<button class="page-item__button page-item__button--border">
+											4
+										</button>
+										<button class="page-item__button">
+											<img src="/assets/icon/btn-next-page.svg" alt="" />
+										</button>
+										<button class="page-item__button">
+											<img src="./assets/icon/btn-lastpage.svg" alt="" />
+										</button>
+									</div>
+								</div>
+								<div class="col l-3 page-right">
+									<input type="number" value="10" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

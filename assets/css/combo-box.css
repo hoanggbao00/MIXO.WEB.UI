@@ -1,0 +1,14 @@
+select {
+  display: inline-block;
+}
+
+.combo-box {
+  padding: 0 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 40px;
+  font-size: 13px;
+  outline: none;
+  border: 1px solid #bbbbbb;
+  min-width: 100px;
+}

@@ -1,0 +1,90 @@
+.table-wrap {
+  display: block;
+  width: 48%;
+}
+
+#phieu i{
+  font-size: 20px;
+}
+
+#phieu .title-item {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden !important;
+}
+
+#detail {
+  color: var(--info-color);
+}
+
+#edit {
+  color: var(--success-color);
+}
+
+#delete {
+  color: var(--error-color);
+}
+
+.detail-modal {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.modal-title {
+  text-align: center;
+}
+.modal-title p {
+  color: grey;
+  font-size: 13px;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.item-wrap p:first-of-type {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  color: grey;
+}
+
+.modal-footer .col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.col p:nth-of-type(3) {
+  font-size: 13px;
+  color: grey;
+}
+
+.modal-footer .col p:first-of-type {
+  color: grey;
+}
+
+.item-wrap p.modal-detail{
+  white-space: normal;
+  color: black;
+}
+
+.modal-footer {
+  margin-top: 20px;
+  padding-bottom: 10px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+textarea {
+  width: 100%;
+  height: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 16px;
+}

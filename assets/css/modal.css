@@ -1,0 +1,141 @@
+.modal-container {
+  min-width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: none;
+}
+
+.modal-container::backdrop {
+  background-color: rgba(0, 0, 0, .3);
+}
+
+/* USER */
+
+.user {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.user-header {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.user-header__close {
+  padding: 12px 16px;
+}
+
+.user-header__heading {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 24px;
+  font-size: 24px;
+  flex: 1;
+  text-align: center;
+}
+
+.user-container {
+  padding: 0 24px;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.user-avatar {
+  text-align: center;
+}
+
+.user-avatar__img {
+  max-width: 90%;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+}
+
+.user-avatar__title {
+  width: 100%;
+  padding: 0 2px;
+  text-align: center;
+}
+
+.user-content {
+  display: block;
+}
+
+.user-info {
+  display: block;
+}
+
+.user-info__heading {
+  position: relative;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.user-info__heading::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  background-color: #019160;
+  top: 100%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.user__input-box {
+  flex-flow: nowrap;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.user__input-heading {
+  width: 100%;
+}
+
+.user-info__left {
+  padding: 0 4px;
+}
+
+.user__input-content {
+  height: 36px;
+  padding-left: 16px;
+  border: 1px solid #ddd;
+  outline: none;
+  border-radius: 4px;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.user__footer {
+  display: flex;
+  padding: 0 24px;
+  background-color: #f3f3f3;
+  height: 60px;
+  align-items: center;
+  justify-content: end;
+}
+
+.user__footer>button {
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.user--cancel {
+  background-color: transparent;
+  color: #000;
+}
+
+.user--cancel:hover {
+  background-color: #c5c5c5;
+}
+
+dialog[type=add] .addTitle,
+dialog[type=edit] .editTitle{
+  display: block;
+}
+
+dialog[type=add] .editTitle,
+dialog[type=edit] .addTitle{
+  display: none;
+}

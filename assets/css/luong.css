@@ -1,0 +1,210 @@
+/* text action */
+.luongAction {
+	text-decoration: underline;
+	color: var(--info-color);
+	cursor: pointer;
+	font-style: normal;
+}
+
+/* modal css */
+.detail {
+	width: 600px;
+	background-color: blanchedalmond;
+	padding: 10px;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.detail .row {
+	margin: 0;
+}
+
+.title-wrap {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.title-wrap * {
+	text-align: center;
+}
+
+.user-info {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.luong-detail {
+	flex-direction: column;
+	gap: 5px;
+	margin-bottom: 10px;
+}
+
+.phuCapAction {
+	margin: 0;
+	justify-content: space-between;
+}
+
+.phuCapAction i {
+	font-size: 20px;
+}
+
+.phuCapAction i:hover {
+	cursor: pointer;
+	color: var(--success-color);
+}
+
+.phuCapTable {
+	justify-content: center;
+}
+
+#phuCapTable {
+	border-collapse: collapse;
+	margin: 0;
+	width: 100%;
+	height: 290px;
+	border: 1px solid black;
+}
+
+#phuCapTable thead {
+	width: calc(100% - 1em);
+}
+
+#phuCapTable tbody {
+	display: block;
+	overflow: auto;
+	height: 100%;
+}
+
+#phuCapTable .main-tr {
+	margin: 0;
+}
+
+.context {
+	text-align: center;
+}
+
+.person {
+	text-align: right;
+}
+
+.btnTop {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	padding-top: 2px;
+}
+
+.btnTop i {
+	font-size: 20px;
+	text-align: center;
+}
+
+.btnTop i:hover {
+	color: var(--success-color);
+}
+
+.new input {
+	width: 90%;
+	font-size: 17px;
+}
+
+.saveEdit {
+	margin: 0;
+	margin-top: 20px;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.saveEdit p {
+	color: grey;
+	font-size: 13px;
+}
+
+/* end modal */
+
+hr {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/* modal add  */
+.addLuong {
+	width: 500px;
+	flex-direction: column;
+	margin: 0;
+	padding: 10px;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	gap: 10px;
+	min-height: 300px;
+}
+
+.addLuong .input-container {
+	position: relative;
+	width: 70%;
+}
+
+.addLuong .input-icon__input {
+	border: 1px solid grey;
+	width: 100%;
+}
+
+.addLuong .input-icon__input:focus {
+	border: 1px solid var(--success-color);
+}
+
+.clear {
+	position: absolute;
+	top: 210px;
+	right: 10px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	padding-top: 2px;
+}
+
+.dropdown-search {
+	margin-top: 5px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	width: 100%;
+	position: absolute;
+	background-color: #fff;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	border-radius: 5px;
+	overflow-y: auto;
+	height: 100px;
+}
+
+.dropdown-search .item {
+	cursor: pointer;
+	padding: 5px;
+	font-size: 13px;
+}
+
+.dropdown-search .item:hover {
+	background-color: rgba(128, 128, 128, 0.486);
+}
+
+.user-search-info {
+	justify-content: space-between;
+}
+
+input#coSo {
+	text-align: center;
+	width: 120px;
+}

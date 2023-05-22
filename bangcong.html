@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="./assets/css/base/base.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="./assets//font/fontawesome-5.15.4/css/all.min.css"
+		/>
+
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="grid wide">
+			<div class="row app">
+				<div class="app__container">
+					<header class="row app__header">
+						<div class="app-header__left">
+							<div class="header-left__items">
+								<div class="header-left__toggle">
+									<label
+										for="toggle-sidebar"
+										class="header-left__toggle-icon"
+										id="toggle-button"
+									>
+										<img src="./assets/img/toggle.png" alt="" />
+									</label>
+									<input
+										type="checkbox"
+										name="sidebar"
+										id="toggle-sidebar"
+										style="display: none"
+									/>
+									<div class="header-left__toggle-logo">
+										<img src="./assets/logo.png" alt="" />
+									</div>
+								</div>
+								<div class="header-left__agency">
+									<div class="header-left__agency-logo">
+										<img src="./assets/img/logo.png" alt="" />
+									</div>
+									<div class="header-left__agency-title">MIXO COFFEE</div>
+									<div class="header-left__agency-icon">
+										<i class="fas fa-angle-down"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="app-header__right">
+							<div class="header-right__items">
+								<div class="header-right__notify">
+									<i class="far fa-bell"></i>
+								</div>
+
+								<div class="header-right__account">
+									<div class="header-right__account-avatar">
+										<img src="./assets/icon/avatar-default.png" alt="" />
+									</div>
+									<div class="header-right__account-name">tên</div>
+									<div class="dropdown">
+										<div class="row" onclick="signout()">
+												<i><i class="far fa-sign-out"></i></i>
+												<p>Đăng xuất</p>
+										</div>
+								</div>
+								</div>
+								<div class="header-right__more">
+									<i class="fa-solid fa-ellipsis"></i>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="row no-gutters app-content">
+						<div class="col content-menu collapse">
+							<div class="menu-list">
+								<div class="menu-list__items">
+									<br />
+									<a class="menu-list__item" href="./home.html">
+										<div class="menu-list-icon">
+											<i class="far fa-file"></i>
+										</div>
+										<div class="menu-list-title">Hồ sơ nhân viên</div>
+									</a>
+									<a class="menu-list__item" href="./luong.html">
+										<div class="menu-list-icon">
+											<i class="far fa-file"></i>
+										</div>
+										<div class="menu-list-title">Quản lý lương</div>
+									</a>
+									<div class="menu-list__item selected">
+										<div class="menu-list-icon">
+											<i class="far fa-file"></i>
+										</div>
+										<div class="menu-list-title">Quản lý bảng công</div>
+									</div>
+									<a class="menu-list__item" href="./phieu.html">
+										<div class="menu-list-icon">
+											<i class="far fa-file"></i>
+										</div>
+										<div class="menu-list-title"">Quản lý kỷ luật</div>
+									</a>
+									<div class="menu-list__item">
+										<div class="menu-list-icon">
+											<i class="far fa-file"></i>
+										</div>
+										<div class="menu-list-title">Thiết lập</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col content-main">
+							<div class="table-action">
+								<div class="row">
+									<div class="action-left">
+										<h2>Bảng công</h2>
+									</div>
+									<div class="action-right">
+										<button class="m-button" id="add">
+											<p class="button__icon-title">Thống kê</p>
+										</button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="action-left">
+										<div class="input-container">
+											<div class="input-icon">
+												<input
+													class="input-icon__input"
+													type="text"
+													placeholder="Tìm kiếm theo Mã hoặc Tên"
+													id="nameInput"
+												/>
+												<img
+													class="input-icon__img"
+													src="./assets/icon/search.png"
+													alt=""
+												/>
+											</div>
+										</div>
+										<div class="input-date__container">
+											<label class="user__input-heading" for="">Từ ngày</label>
+											<input type="date" class="user__input-content" id="fromDateInput" />
+										</div>
+										<div class="input-date__container">
+											<label class="user__input-heading" for="">Đến ngày</label>
+											<input type="date" class="user__input-content" id="toDateInput"/>
+										</div>
+									</div>
+									<div class="action-right">
+										<button class="button__refresh" id="refresh">
+											<i class="far fa-sync" style="color: #b3b3b3;"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<table id="bangcong" class="content-main__table">
+								<thead>
+									<tr class="row main-tr">
+										<th class="col l-1">Mã nhân viên</th>
+										<th class="col l-3">Họ và tên</th>
+										<th class="col l-1">Ngày làm</th>
+										<th class="col l-1">Giờ vào</th>
+										<th class="col l-1">Giờ ra</th>
+										<th class="col l-1">Thời gian làm việc</th>
+										<th class="col l-1">Thời gian tăng ca</th>
+										<th class="col l-1">Trạng thái</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+							<div class="row content-main__page">
+								<div class="col l-3 page-left">
+									<div class="row page-left__title">
+										<p>Hiển thị</p>
+										<b><span id="count">0</span></b>
+										<p>kết quả</p>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end app -->
+			<dialog class="modal-container">
+					<div id="thongke">
+						<h1>Thống kê giờ làm</h1>
+						<hr>
+						<div class="item-wrap row">
+							<p>Nhân viên đi sớm nhiều nhất: </p>
+							<p id="DiMuonNhieuNhat">Không có ai <span>(0 lần)</span></p>
+						</div>
+						<div class="item-wrap row">
+							<p>Nhân viên đi muộn nhiều nhất: </p>
+							<p id="DiSomNhieuNhat">Không có ai <span>(0 lần)</span></p>
+						</div>
+						<div class="item-wrap row">
+							<p>Nhân viên tăng ca nhiều nhất: </p>
+							<p id="TangCaNhieuLanNhat">Không có ai <span>(0 lần)</span></p>
+						</div>
+						<div class="item-wrap row">
+							<p>Nhân viên làm nhiều giờ nhất: </p>
+							<p id="DiLamNhieuGioNhat">Không có ai <span>(0 giờ)</span></p>
+						</div>
+						<div class="item-wrap row">
+							<p>Nhân viên tăng ca nhiều giờ nhất: </p>
+							<p id="TangCaNhieuGioNhat">Không có ai <span>(0 giờ)</span></p>
+						</div>
+						<hr>
+						<div class="item-wrap row">
+							<p>Ngày tạo báo cáo:</p>
+							<p id="NgayTaoBaoCao"></p>
+						</div>
+					</div>
+					<button id="close">
+						<img src="./assets/icon/x.svg" alt="" />
+					</button>
+				</div>
+			</dialog>
+			<div id="toast-container">
+			</div>
+		</div>
+
+		<!-- script -->
+		<script src="./assets/js/script.js"></script>
+		<script src="./assets/js/Toast.js"></script>
+		<script src="./assets/js/bangcong.js"></script>
+	</body>
+</html>

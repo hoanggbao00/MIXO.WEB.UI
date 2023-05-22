@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./assets/css/base/base.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/luong.css">
+  <link rel="stylesheet" href="./assets//font/fontawesome-5.15.4/css/all.min.css">
+  
+  <title>Lương</title>
+</head>
+<body>
+  <div class="grid wide">
+    <div class="row app">
+        <div class="app__container">
+            <header class="row app__header">
+                <div class="app-header__left">
+                    <div class="header-left__items">
+                        <div class="header-left__toggle">
+                            <label for="toggle-sidebar" class="header-left__toggle-icon" id="toggle-button">
+                                <img src="./assets/img/toggle.png" alt="">
+                            </label>
+                            <input type="checkbox" name="sidebar" id="toggle-sidebar" style="display: none">
+                            <div class="header-left__toggle-logo">
+                                <img src="./assets/logo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="header-left__agency">
+                            <div class="header-left__agency-logo">
+                                <img src="./assets/img/logo.png" alt="">
+                            </div>
+                            <div class="header-left__agency-title">MIXO COFFEE</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__right">
+                    <div class="header-right__items">
+                        <div class="header-right__notify">
+                            <i class="far fa-bell"></i>
+                        </div>
+
+                        <div class="header-right__account">
+                            <div class="header-right__account-avatar">
+                                <img src="./assets/icon/avatar-default.png" alt="">
+                            </div>
+                            <div class="header-right__account-name">bảo</div>
+                            <div class="dropdown">
+                                <div class="row" onclick="signout()">
+                                    <i><i class="far fa-sign-out"></i></i>
+                                    <p>Đăng xuất</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-right__more">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="row no-gutters app-content">
+                <div class="col content-menu collapse">
+                    <div class="menu-list">
+                        <div class="menu-list__items">
+                            <br>
+                            <a class="menu-list__item" href="./home.html">
+                                <div class="menu-list-icon">
+                                    <i class="far fa-file"></i>
+                                </div>
+                                <div class="menu-list-title">Hồ sơ nhân viên</div>
+                            </a>
+                            
+                            <a class="menu-list__item selected" href="./luong.html">
+                                <div class="menu-list-icon">
+                                    <i class="far fa-file"></i>
+                                </div>
+                                <div class="menu-list-title">Quản lý lương</div>
+                            </a>
+                            <a class="menu-list__item" href="./bangcong.html">
+                                <div class="menu-list-icon">
+                                    <i class="far fa-file"></i>
+                                </div>
+                                <div class="menu-list-title">Quản lý bảng công</div>
+                            </a>
+                            <a class="menu-list__item" href="./phieu.html">
+                                <div class="menu-list-icon">
+                                    <i class="far fa-file"></i>
+                                </div>
+                                <div class="menu-list-title">Quản lý kỷ luật</div>
+                            </a>
+                            <div class="menu-list__item">
+                                <div class="menu-list-icon">
+                                    <i class="far fa-file"></i>
+                                </div>
+                                <div class="menu-list-title">Thiết lập</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col content-main">
+                    <div class="table-action">
+                        <div class="row">
+                            <div class="action-left">
+                                <h2>Bảng lương</h1>
+                            </div>
+                            <div class="action-right">
+                                <button class="m-button button__icon" id="add">
+                                    <img class="button__icon-img" src="./assets/icon/add.png" alt="">
+                                    <p class="button__icon-title">Thêm bảng lương</p>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="action-left">
+                                <div class="input-container">
+                                    <div class="input-icon">
+                                        <input class="input-icon__input" type="text" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại" id="filterName">
+                                        <img class="input-icon__img" src="./assets/icon/search.png" alt="">
+                                    </div>
+                                </div>
+                                <select class="combo-box" id="filterKyLuong">
+                                    <option value="">Tất cả kỳ lương</option>
+                                    <option value="042023">04/2023</option>
+                                    <option value="052023">05/2023</option>
+                                </select>
+                                <select class="combo-box" id="filterTinhTrang">
+                                    <option value="">Tình trạng lương</option>
+                                    <option value="0">Chưa thanh toán</option>
+                                    <option value="1">Đã thanh toán</option>
+                                    <option value="2">Chưa đến kỳ hạn</option>
+                                </select>
+                            </div>
+                            <div class="action-right">
+                                <button class="button__refresh" id="edit" style="display: none">
+                                    <i class="far fa-user-edit"></i>
+                                </button>
+                                <button class="button__refresh" id="delete" style="display: none">
+                                    <i class="fas fa-trash" style="color: #fa0025;"></i>
+                                </button>
+                                <button class="button__refresh" id="refresh">
+                                    <i class="far fa-sync" style="color: #b3b3b3;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="content-main__table">
+                        <thead>
+                            <tr class="row main-tr">
+                                <th class="col l-1">Kỳ lương</th>
+                                <th class="col l-1 main-th__id">Mã nhân viên</th>
+                                <th class="col l-3 main-th__name">Họ và tên</th>
+                                <th class="col l-1 main-th_basesalary">Lương cơ bản</th>
+                                <th class="col l-2 main-th_phucap">Phụ cấp</th>
+                                <th class="col l-2 main-th_status">Tình trạng</th>
+                                <th class="col l-2 main-th__action">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row main-tr">
+                                <th class="col l-1">04/2023</th>
+                                <th class="col l-1 main-th__id">NV001</th>
+                                <th class="col l-3 main-th__name">Bảo</th>
+                                <th class="col l-1 main-th_basesalary">20000</th>
+                                <th class="col l-2 main-th_phucap">0</th>
+                                <th class="col l-2 main-th_status">Đã thanh toán</th>
+                                <th class="col l-2 main-th__action"><p class="luongAction" onclick="showDetail('detail')">Chi tiết</p></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row content-main__page">
+                        <div class="col l-3 page-left">
+                            <div class="row page-left__title">
+                                <p>Hiển thị</p>
+                                <b><span id="count">123</span></b>
+                                <p>kết quả</p>
+                            </div>
+                        </div>
+                        <div class="col l-6 page-list__items">
+                            <div class="page-list__item">
+                                <button class="page-item__button">
+                                    <img src="./assets/icon/btn-firstpage.svg" alt="">
+                                </button>
+                                <button class="page-item__button" onclick="prevPage()">
+                                    <img src="./assets/icon/btn-prev-page.svg" alt="">
+                                </button>
+                                <button class="page-item__button page-item__button--border page-item__button--active">1</button>
+                                <button class="page-item__button page-item__button--border">2</button>
+                                <button class="page-item__button page-item__button--border">3</button>
+                                <button class="page-item__button page-item__button--border">4</button>
+                                <button class="page-item__button" onclick="nextPage()">
+                                    <img src="./assets/icon/btn-next-page.svg" alt="">
+                                </button>
+                                <button class="page-item__button">
+                                    <img src="./assets/icon/btn-lastpage.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col l-3 page-right">
+                            <input type="number" value="10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end app -->
+    <dialog class="modal-container">
+        
+    </dialog>
+    <dialog class="pop-up container">
+        
+    </dialog>
+    <div id="toast-container">
+    </div>
+</div>
+
+<!-- script -->
+<script src="./assets/js/script.js"></script>
+<script src="./assets/js/Toast.js"></script>
+<script src="./assets/js/popup.js"></script>
+<script src="./assets/js/luong.js"></script>
+
+</body>
+</html>

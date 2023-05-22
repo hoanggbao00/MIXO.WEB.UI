@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MIXO COFFEE - Quản lý nhân sự</title>
+		<link rel="stylesheet" href="./assets/css/base/base.css" />
+		<link rel="stylesheet" href="./assets/css/login.css" />
+		<link
+			rel="stylesheet"
+			href="./assets/font/fontawesome-5.15.4/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<main class="center">
+			<div class="container">
+				<h1>Quản lý nhân sự MIXO</h1>
+				<div class="form-center">
+					<h2 class="form-title">ĐĂNG NHẬP</h2>
+					<input
+						class="field-input"
+						type="text"
+						name="login"
+						placeholder="Username (Mã nhân viên)"
+						id="username"
+					/>
+					<input
+						class="field-input"
+						type="password"
+						name="login"
+						placeholder="Mật khẩu"
+						id="password"
+					/>
+					<div class="input-container row">
+						<input type="checkbox" name="showPassword" id="show" />
+						<label for="show"> Hiển thị mật khẩu</label>
+					</div>
+					<button class="m-button" type="submit">Đăng nhập</button>
+				</div>
+			</div>
+		</main>
+		<div id="toast-container"></div>
+		<script src="./assets/js/Toast.js"></script>
+		<script src="./assets/js/login.js"></script>
+	</body>
+</html>
